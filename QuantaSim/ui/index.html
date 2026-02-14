@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quantum AI Assistant</title>
+</head>
+<body>
+  <h1>Quantum Simulation Demo</h1>
+  <label>h_coeff: <input id="h_coeff" value="0.5"></label><br>
+  <label>t_final: <input id="t_final" value="10"></label><br>
+  <label>steps: <input id="steps" value="100"></label><br>
+  <button onclick="runSim()">Run Simulation</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function runSim() {
+      const h_coeff = parseFloat(document.getElementById('h_coeff').value);
+      const t_final = parseFloat(document.getElementById('t_final').value);
+      const steps = parseInt(document.getElementById('steps').value, 10);
+
+      const resp = await fetch('http://localhost:5000/simulate', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ h_coeff, t_final, steps })
+      });
+      const data = await resp.json();
+      document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

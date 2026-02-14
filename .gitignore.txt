@@ -1,0 +1,3 @@
+QuantaSim/.idea
+QuantaSim/.venv
+QuantaSim/.pytest_cache
