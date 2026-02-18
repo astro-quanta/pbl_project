@@ -51,25 +51,60 @@
             <div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">ID: 2427030171</div>
             <h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight"><span class="gradient-text uppercase">AI-Assisted Quantum Simulation & Modelling using Agentic AI</span></h1>
             <p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-                "Hypothesis/Project Statement: Define the core research question or the primary objective of your development project."
+                "Hypothesis/Project Statement: Quantum simulation is complex, resource-intensive, and lacks intelligent automation, limiting accessibility and efficiency. This project aims to build an AI-powered system that simplifies workflows, reduces cost, and accelerates quantum discovery."
             </p>
         </section>
 
         <section id="problem" class="grid md:grid-cols-2 gap-12 items-stretch">
             <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
                 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
-                <p class="text-slate-400 leading-relaxed text-justify">Describe the specific challenge you are addressing. Why is this project necessary?</p>
+                <p class="text-slate-400 leading-relaxed text-justify">Quantum simulation remains complex, resource-intensive, and inaccessible to many due to the lack of automated parameter selection, real-time diagnostics, fast ML-based prediction, and user-centered guidance, resulting in inefficient workflows and limited exploration. There is a critical need for an integrated AI-powered system that streamlines simulation processes, reduces computational cost, democratizes access, and accelerates scientific discovery in quantum mechanics.</p>
             </div>
-            <div class="space-y-6">
-                <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
-                    <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review / Market Research</h3>
-                    <p class="text-sm text-slate-500 italic">Summary of existing solutions or research papers analyzed.</p>
-                </div>
+            <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
+  <h3 class="text-blue-400 font-bold text-sm uppercase tracking-widest mb-3">
+    Literature Review / Market Research
+  </h3>
+
+  <ul class="text-sm text-slate-400 space-y-3 leading-relaxed list-disc pl-5">
+    <li>
+      Classical computational physics methods (tensor networks, configuration interaction, numerical solvers) remain accurate but computationally intensive.
+    </li>
+    <li>
+      ML-based surrogate models — especially Graph Neural Networks — significantly accelerate quantum property prediction and materials discovery.
+    </li>
+    <li>
+      Agentic AI and LLM-based systems are introducing workflow automation, conversational interfaces, and intelligent assistance in scientific computing.
+    </li>
+    <li>
+      However, most solutions operate independently: simulators focus on computation speed, while AI agents focus on interaction — lacking deep integration.
+    </li>
+  </ul>
+</div>
+
                 <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
-                    <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Research Gap / Innovation</h3>
-                    <p class="text-sm text-slate-500 italic">What makes your approach different or better than the State-of-the-Art?</p>
-                </div>
-            </div>
+  <h3 class="text-purple-400 font-bold text-sm uppercase tracking-widest mb-3">
+    Research Gap / Innovation
+  </h3>
+
+  <ul class="text-sm text-slate-400 space-y-3 leading-relaxed list-disc pl-5">
+    <li>
+      No fully integrated AI-driven quantum simulation ecosystem currently exists.
+    </li>
+    <li>
+      Current workflows are fragmented, require manual parameter tuning, and demand high expertise.
+    </li>
+    <li>
+      Surrogate models accelerate prediction, but lack intelligent orchestration.
+    </li>
+    <li>
+      AI agents assist interaction, but are not tightly coupled with physics-based simulation engines.
+    </li>
+    <li>
+      Our system unifies ML surrogate modeling, automated diagnostics, and AI-agent orchestration into a single intelligent workflow.
+    </li>
+  </ul>
+</div>
+
         </section>
 
         <section id="methodology" class="space-y-12">
@@ -78,46 +113,98 @@
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
-                    <p class="text-sm text-slate-500">[Source, size, and preprocessing details]</p>
+                    <p class="text-sm text-slate-500">QM9 is a benchmark quantum chemistry dataset containing ~134,000 small organic molecules 
+(composed of C, H, O, N, F) with up to 9 heavy atoms. 
+The molecules are generated from the GDB-17 database and their geometric, energetic, 
+electronic, and thermodynamic properties are computed using Density Functional Theory (B3LYP/6-31G(2df,p)). 
+<br><br>
+Each molecule includes:
+<ul class="text-sm text-slate-500 list-disc list-inside mt-2">
+  <li>3D atomic coordinates</li>
+  <li>Atom types and connectivity</li>
+  <li>Total energy, HOMO/LUMO energies</li>
+  <li>Dipole moment, polarizability</li>
+  <li>Heat capacity, enthalpy, free energy</li>
+</ul>
+<br>
+Preprocessing: Molecular graphs are constructed with atoms as nodes and bonds as edges. 
+Node features include atomic number and charge; edge features include bond type and distance. 
+Data is normalized and split into training/validation/test sets for GNN-based surrogate modeling.</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
-                    <p class="text-sm text-slate-500">[Algorithms used or System Workflow]</p>
+                    <p class="text-sm text-slate-500"><div class="mt-12 text-center">
+  <h3 class="text-2xl font-bold mb-6">End-to-End Project Workflow</h3>
+  <img src="images/workflow.png" 
+       alt="End to End Workflow Diagram" 
+       class="mx-auto rounded-3xl shadow-lg w-3/4">
+</div></p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
-                    <i class="fab fa-python text-green-500 text-3xl mb-4"></i>
+                    <i class="fab fa-github mr-2"></i> View Code
                     <h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">Live Execution</h3>
-                    <a href="[LINK]" target="_blank" class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">VIEW CODE / DEMO</a>
+                   <a href="https://github.com/astro-quanta/pbl_project/tree/main/QuantaSim" 
+   target="_blank" 
+   class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition">
+   View Project Code
+</a>
+
                 </div>
             </div>
         </section>
 
-        <section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
-            <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">Results & <span class="text-blue-500">Analysis</span></h2>
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="h-80"><canvas id="resultsChart"></canvas></div>
-                <div class="space-y-6">
-                    <div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
-                        <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Accuracy / Performance</span>
-                        <span class="text-blue-400 font-mono font-black text-3xl">XX.X%</span>
-                    </div>
-                    <p class="text-slate-500 text-sm italic text-justify leading-relaxed">Quantifiable outcomes and evaluation metrics compared to baselines.</p>
-                </div>
+       <section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
+    
+    <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">
+        Results & <span class="text-blue-500">Analysis</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <!-- 🔹 Simulation Output Image -->
+        <div class="flex justify-center">
+            <img 
+                src="images/test%20run.png"
+                alt="Two-Level Quantum System Evolution Test Run"
+                class="rounded-2xl shadow-2xl border border-blue-500/30 max-w-2xl w-full hover:scale-105 transition duration-300"
+            />
+        </div>
+
+        <!-- 🔹 Analysis Text -->
+        <div class="space-y-6">
+
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 shadow-inner">
+                <span class="text-slate-400 font-bold uppercase text-xs tracking-widest block mb-3">
+                    Performance Summary
+                </span>
+
+                <p class="text-slate-400 text-sm leading-relaxed text-justify">
+                    The test run demonstrates stable two-level quantum system evolution 
+                    under the implemented simulation framework. The AI-assisted workflow 
+                    enables structured execution, automated parameter handling, and 
+                    consistent system behavior validation.
+                </p>
             </div>
-        </section>
+
+        </div>
+
+    </div>
+
+</section>
+
 
         <section id="team" class="text-center pt-10 border-t border-slate-900">
             <h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">Academic Credits</h2>
             <div class="flex flex-wrap justify-center gap-10">
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
                     <p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">Project Guide</p>
-                    <p class="font-black text-xl text-slate-100">[Guide Name]</p>
+                    <p class="font-black text-xl text-slate-100">Dr. Ankit Shrivastava</p>
                 </div>
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
                     <p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Team Member 1</p>
-                    <p class="font-black text-xl text-slate-100">[Student Name]</p>
-                    <p class="text-[10px] text-slate-500 mt-1">[Reg No]</p>
+                    <p class="font-black text-xl text-slate-100">Shriya Desai</p>
+                    <p class="text-[10px] text-slate-500 mt-1">2427030171</p>
                 </div>
             </div>
         </section>
